@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'Rubik Medium';
+    src: url('assets/fonts/Rubik-Medium.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url('assets/fonts/Rubik-Bold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik Regular';
+    src: url('assets/fonts/Rubik-Regular.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik SemiBold';
+    src: url('assets/fonts/Rubik-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Medium.woff2') format('woff2'),
+        url('assets/fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Golos Text';
+    src: url('assets/fonts/GolosText-Bold.woff2') format('woff2'),
+        url('assets/fonts/GolosText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --body-color: #0F0F0F;
+    --main-color: #CC0100;
+    --hover-color: #FF0A0A;
+    --gray-color: #525252;
+    --border-color: #E1E1E1;
+    --accent-yellow-20: #FFF4D0;
+    --neutral-black-100: #000;
+    --neutral-white-100: #FFF;
+    --neutral-grey-40: #CCC;
+    --neutral-grey-60: #999;
+    --neutral-grey-80: #1F1F1F;
+    --neutral-light-grey: #f8f8f8;
+    --accent-yellow-20: #FFF4D0;
+    --primary-bold-font: 'Rubik Bold'; 
+    --primary-font: 'Rubik Medium'; 
+    --second-font: 'Rubik SemiBold';    
+    
+}
+
+html{
+  	-webkit-text-size-adjust: 100%;
+}
+body{
+	font-family: var(--primary-font), sans-serif;
+	margin: 0;
+	padding: 0;
+	color: var(--body-color);
+	font-size: 18px;
+    line-height: normal;
+	font-weight: normal;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+main {
+	display: block;
+}
+h1, h2, h3, h4,h5,p{
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+}
+h1,h2{
+    font-family: var(--second-font);
+    font-weight: 200 !important;
+}
+h3,h4{
+    font-family: 'Arial Bold';
+}
+figure, img{
+	padding: 0;
+	margin: 0;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+    vertical-align: middle;
+}
+a:hover{
+	color: inherit;
+	text-decoration: none;
+}
+a{
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: var(--neutral-black-100);
+}
+p{
+	padding: 0;
+	margin: 0;
+    line-height: 1.8;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.btn:focus, .btn:active,
+a:focus, a:active,
+input:focus, input:active,
+textarea:focus, textarea:active,
+select:focus, select:active,
+button:focus, button:active,
+span:focus, span:active{
+	outline: 0;
+	box-shadow: none;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+input, textarea, select, button{
+	font-family: 'Figtree', sans-serif;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/* Helper Styles */
+.site-container{
+	max-width: 1440px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.site-row{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.site-align-center{
+	align-items: center;
+	justify-content: center;
+}
+.site-col-12{
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.site-col-11{
+	-ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+.site-col-10{
+	-ms-flex: 0 0 83.333333%;
+	flex: 0 0 83.333333%;
+	max-width: 83.333333%;
+}
+.site-col-9{
+	-ms-flex: 0 0 75%;
+	flex: 0 0 75%;
+	max-width: 75%;
+}
+.site-col-8{
+	-ms-flex: 0 0 66.666667%;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+}
+.site-col-7{
+	-ms-flex: 0 0 58.333333%;
+	flex: 0 0 58.333333%;
+	max-width: 58.333333%;
+}
+.site-col-6{
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.site-col-5{
+	-ms-flex: 0 0 41.666667%;
+	flex: 0 0 41.666667%;
+	max-width: 41.666667%;
+}
+.site-col-4{
+	-ms-flex: 0 0 33.333333%;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+}
+.site-col-3{
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+.site-col-2{
+	-ms-flex: 0 0 16.666667%;
+	flex: 0 0 16.666667%;
+	max-width: 16.666667%;
+}
+.site-col-1{
+	-ms-flex: 0 0 8.333333%;
+	flex: 0 0 8.333333%;
+	max-width: 8.333333%;
+}
+.site-col-1,
+.site-col-2,
+.site-col-3,
+.site-col-4,
+.site-col-5,
+.site-col-6,
+.site-col-7,
+.site-col-8,
+.site-col-9,
+.site-col-10,
+.site-col-11,
+.site-col-12{
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.site-col-offset-4{
+	margin-left: 33.333333%;
+}
+.site-col-offset-3{
+	margin-left: 25%;
+}
+.site-col-offset-2{
+	margin-left: 16.666667%;
+}
+.site-col-offset-1{
+	margin-left: 8.333333%;
+}
+.img-fluid{
+	max-width: 100%;
+    height: auto;
+}
+
+/* Site Headings */
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.content-center{
+    display: flex;
+    justify-content: center;
+}
+.content-right{
+    display: flex;
+    justify-content: right;
+}
+.content-left{
+    display: flex;
+    justify-content: left;
+}
+.site-heading-white{
+    color: #fff;
+}
+.site-heading-dark{
+    color: var(--body-color);
+}
+.site-heading h2{
+    font-family: var(--second-font);
+    font-size: 48px;
+}
+.site-heading h3{
+    font-size: 28px;
+    line-height: 1.5;
+}
+.site-heading p{
+    color: #686F75;
+}
+
+/* Site Buttons */
+.site-button{
+    display: block;
+}
+.site-button a{
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 5px;
+    height: 50px;
+    padding: 0 35px;
+    line-height: 50px;
+    border-radius: 5px;
+    color: var(--body-color);
+    background-color: var(--main-color);
+}
+.site-button a:hover,
+.site-button a:focus{
+    background-color: var(--hover-color);
+}
+.site-button a svg{
+    width: 15px;
+    height: 15px;
+}
+/* Nav Buttons */
+.nav-button{
+    display: block;
+}
+.nav-button a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 5px;
+    height: 50px;
+    padding: 0 20px 0 15px;
+    border-radius: 100px;
+    color: var(--neutral-white-100);
+    background-color: var(--main-color);
+}
+.nav-button a:hover,
+.nav-button a:focus{
+    background-color: var(--hover-color);
+}
+
+/* Logo */
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+.nav-logo a{
+    display: block;
+    height: 50px;
+}
+.nav-logo img{
+    display: block;
+    height: 50px;
+    width: 100%;
+}
+
+/* Top Navigation */
+.top-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.top-nav{
+    padding: 0 30px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.06);
+}
+.top-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Main Navigation */
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-menu .nav-category{
+    display: flex;
+    align-items: center;
+}
+.nav-menu .nav-category .category-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 56px;
+    min-width: 90px;
+    border-radius: 10px;
+    padding: 4px 20px 4px 10px;
+    background: var(--neutral-white-100);
+    border: 1px solid var(--border-color);
+}
+.nav-menu .nav-category .category-item a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-menu .category-image img{
+    width: 50px;
+    height: 50px;
+}
+.nav-menu .nav-button a img,
+.nav-menu .nav-button a svg{
+    width: 25px;
+    height: 25px;
+}
