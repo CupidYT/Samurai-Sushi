@@ -697,3 +697,33 @@ input, textarea, select, button{
     font-size: 14px;
     color: var(--footer-color);
 }
+
+/* Swiper */
+.home-slider{
+    margin-bottom: 70px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F3F3;
+}
+.slider-image{
+    height: 600px;
+}
+.slider-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+.swiper-pagination-bullet-active {
+    background: var(--neutral-white-100);
+}
