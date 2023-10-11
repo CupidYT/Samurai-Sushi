@@ -407,6 +407,17 @@ input, textarea, select, button{
     width: 100%;
 }
 
+.main-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    transition: .3s ease;
+}
+main{
+    margin-top: 176px;
+}
+
 /* Top Navigation */
 .top-header{
     position: absolute;
